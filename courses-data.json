@@ -1,0 +1,9 @@
+[
+  {"_id":"5a68fdc3615eda645bc6bdec","tags":["javascript","frontend"],"date":"2018-01-24T21:42:27.388Z","name":"Mastering Javascript","author":"Mosh","isPublished":true,"price":120,"__v":0},
+  {"_id":"5a68fdd7bee8ea64649c2777","tags":["node","backend"],"date":"2018-01-24T21:42:47.912Z","name":"Node.js","author":"Mosh","isPublished":true,"price":255,"__v":0},
+  {"_id":"5a68fde3f09ad7646ddec17e","tags":["react","frontend"],"date":"2018-01-24T21:42:59.605Z","name":"Mastering React","author":"Mosh","isPublished":true,"price":275,"__v":0},
+  {"_id":"5a68fdf95db93f6477053ddd","tags":["redux","frontend"],"date":"2018-01-24T21:43:21.589Z","name":"Redux","author":"Ethan","isPublished":false,"price":172,"__v":0},
+  {"_id":"5a68fe2142ae6a6482c4c9cb","tags":["java","backend"],"date":"2018-01-24T21:44:01.075Z","name":"Java","author":"Liam","isPublished":true,"price":112,"__v":0},
+  {"_id":"5a68ff090c553064a218a547","tags":["ds-algo","backend"],"date":"2018-01-24T21:47:53.128Z","name":"Data Structures & Algorithm","author":"Michael","isPublished":false,"price":142,"__v":0},
+  {"_id":"5a6900fff467be65019a9001","tags":["design-patterns","frontend"],"date":"2018-01-24T21:56:15.353Z","name":"The Ultimate Design Patterns","author":"Mosh","isPublished":true,"price":215,"__v":0}
+]
