@@ -1,13 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/courses-server', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
-});
+mongoose.connect('mongodb://localhost/courses-server');
 
 const courseSchema = new mongoose.Schema({
+    _id: String,
     name: String,
     author: String,
     tags: [ String ],

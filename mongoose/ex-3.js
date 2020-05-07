@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/courses-server');
 
 const courseSchema = new mongoose.Schema({
+    _id: String,
     name: String,
     author: String,
     tags: [ String ],
@@ -15,9 +16,11 @@ const Course = mongoose.model('Course', courseSchema);
 
 async function getCourses() {
     return await Course
-        .find({ isPublished: true, tags: 'backend' })
-        .sort({ name: 1 })
-        .select({ name: 1, author: 1 });
+        .find({ isPublished: true})
+        .or([
+            {price: {$gte: 250}},
+            {name: /.*master.*/i}
+        ])
 }
 
 async function run() {

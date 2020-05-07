@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/courses-server');
 
 const courseSchema = new mongoose.Schema({
+    _id: String,
     name: String,
     author: String,
     tags: [ String ],
@@ -13,17 +14,13 @@ const courseSchema = new mongoose.Schema({
 
 const Course = mongoose.model('Course', courseSchema);
 
-async function getCourses() {
-    return await Course
-        .find({ isPublished: true, tags: {$in: ['frontend', 'backend']} })
-        // .or([ {tags: 'frontend'}, {tags: 'backend'} ])
-        .sort({ price: -1 })
-        .select({ name: 1, author: 1 , price: 1});
+async function deleteCourse(id) {
+    const result = await Course.deleteOne({_id: id});
+    console.log(result);
 }
 
 async function run() {
-    const courses = await getCourses();
-    console.log(courses);
+    await deleteCourse('5a68fdf95db93f6477053ddd');
 }
 
 run();
